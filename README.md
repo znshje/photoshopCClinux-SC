@@ -6,7 +6,7 @@
 ![wine version](https://img.shields.io/badge/wine-%E2%96%B25.22-red) ![Tested on arch](https://img.shields.io/badge/Tested%20on-Archlinux-brightgreen) ![GitHub stars](https://img.shields.io/github/stars/Gictorbit/photoshopCClinux) ![rep size](https://img.shields.io/github/repo-size/gictorbit/photoshopCClinux) ![bash](https://img.shields.io/badge/bash-5.0-yellowgreen)
 </div>
 
-# Photoshop CC v19 installer for Linux
+# Photoshop CC v19 installer for Linux （包含简体中文支持）
 This bash script helps you to install Photoshop CC version 19 on your Linux machine using wine behind the scene
 and sets some necessary components up for the best performance
 
@@ -43,7 +43,7 @@ also you can install photoshop in diffrent directory
 
 ## :computer: Installation
 
-the installer scripts use a virtual drive of wine and makes a new `winprefix` for photoshop
+the installer scripts use a virtual drive of wine and makes a new `winprefix` for photoshop installer scripts use a virtual drive of wine and makes a new `winprefix` for photoshop
 
 first of all, you need to clone the repository with this command:
 ```bash
@@ -51,6 +51,8 @@ git clone https://github.com/Gictorbit/photoshopCClinux.git
 cd photoshopCClinux
 ```
 then you can easily run `setup.sh` script to install photoshop cc on your Linux distro
+
+**refer to [https://github.com/Gictorbit/photoshopCClinux/issues/205](https://github.com/Gictorbit/photoshopCClinux/issues/205) to download the missing installation files**
 
 ```bash
 chmod +x setup.sh
@@ -126,6 +128,16 @@ then restart photoshop.you can open it from
 > **_NOTE2:_** camera raw performance depends on your graphic card driver and its configuration
 
 </details>
+
+## :globe_with_meridians: 安装简体中文支持
+简体中文支持包含字体文件和字体修改注册表，使用`lang_sc.sh`来简易安装。
+```bash
+cd scripts/
+chmod +x lang_sc.sh
+bash lang_sc.sh
+```
+
+完成后，启动Photoshop，打开`编辑-首选项-界面`，选择界面语言为`简体中文 (Simplified Chinese)`。
 
 ## :hotsprings: Uninstall
 to uninstall photoshop you can use the uninstaller script with commands below
