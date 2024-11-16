@@ -47,7 +47,7 @@ function main() {
     rmdir_if_exist $RESOURCES_PATH
 
     # winetricks atmlib corefonts fontsmooth=rgb gdiplus vcrun2008 vcrun2010 vcrun2012 vcrun2013 vcrun2015 atmlib msxml3 msxml6 gdiplus
-    winetricks atmlib fontsmooth=rgb vcrun2008 vcrun2010 vcrun2012 vcrun2013 atmlib msxml3 msxml6
+    winetricks atmlib fontsmooth=rgb vcrun2008 vcrun2010 vcrun2012 vcrun2013 atmlib msxml3 msxml6 gdiplus riched20 riched30
     
     #install photoshop
     sleep 3
@@ -72,7 +72,8 @@ function main() {
 function replacement() {
     local filename="replacement.tgz"
     local filemd5="6441a8e77c082897a99c2b7b588c9ac4"
-    local filelink="https://victor.poshtiban.io/p/gictor/photoshopCC/replacement.tgz"
+    #local filelink="https://victor.poshtiban.io/p/gictor/photoshopCC/replacement.tgz"
+    local filelink="http://127.0.0.1:8080/replacement.tgz"
     local filepath="$CACHE_PATH/$filename"
 
     download_component $filepath $filemd5 $filelink $filename
@@ -96,8 +97,8 @@ function replacement() {
 function install_photoshopSE() {
     local filename="photoshopCC-V19.1.6-2018x64.tgz"
     local filemd5="b63f6ed690343ee12b6195424f94c33f"
-    local filelink="https://victor.poshtiban.io/p/gictor/photoshopCC/photoshopCC-V19.1.6-2018x64.tgz"
-    # local filelink="http://127.0.0.1:8080/photoshopCC-V19.1.6-2018x64.tgz"
+    #local filelink="https://victor.poshtiban.io/p/gictor/photoshopCC/photoshopCC-V19.1.6-2018x64.tgz"
+    local filelink="http://127.0.0.1:8080/photoshopCC-V19.1.6-2018x64.tgz"
     local filepath="$CACHE_PATH/$filename"
 
     download_component $filepath $filemd5 $filelink $filename
